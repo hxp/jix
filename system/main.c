@@ -8,6 +8,11 @@ void kmain() {
 	// multiboot header
 	// char * boot_loader_name =(char*) ((long*)mbd)[16];
 
-	vga_set_colour(0x3,0xa);
 	vga_clear();
+
+	char *hello = "Hello, world!";
+
+	for (int x; hello[x] != 0; x++) {
+		vga_putchar(hello[x]);
+	}
 }
